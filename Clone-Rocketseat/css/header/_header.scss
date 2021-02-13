@@ -1,68 +1,117 @@
 header {
     background-color: #7159c1;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        max-width: 980px;
+        margin: auto;
+    }
+
+    img {
+        width: 150px;
+        margin-left: 20px;
+        padding: 15px 0;
+    }
+
+    nav {
+        @media (max-width: 540px) {
+            display: none;
+        }
+    }
+
+    nav ul {
+        display: flex;
+
+        li {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+                font-size: 1.4rem;
+                padding: 2.4rem;
+                transition: all 250ms linear 0s;
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.15);
+                }
+            }
+        }
+    }
 }
 
-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 980px;
-    margin: auto;
-}
+@media (max-width: 540px) {
+    .one,
+    .two,
+    .three {
+        background-color: #fff;
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
 
-header img {
-    width: 150px;
-    margin-left: 20px;
-    padding: 15px 0;
-}
+        transition-duration: 0.3s;
+    }
 
-header nav ul {
-    display: flex;
-}
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+    }
 
-header nav ul li {
-    list-style: none;
-}
+    /* fullscreen */
+    .menu-section.on {
+        position: absolute;
+        top:0;
+        left:0;
+        
+        width: 100vw;
+        height: 100vh;
 
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    padding: 2.4rem;
-    transition: all 250ms linear 0s;
-}
+        background-color: #7159c1;
+        
+        z-index: 10;
 
-header nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.15);
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-h2 {
-    color: rgb(75, 75, 75);
-    font-size: 3.6rem;
-    line-height: 4.6rem;
-}
+    .menu-section.on nav {
+        display: block;
+    }
 
-h3 {
-    color: rgb(75, 75, 75);
-    font-size: 2.8rem;
-    line-height: 3.8rem;
-}
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 25px;
+        top: 15px;
+    }
 
-.button {
-    display: inline-block;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-    background-color: rgb(113, 89, 193);
-    margin: 15px 0px 0px;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 150ms linear 0s;
-}
+    .menu-section.on .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
 
-.button:hover {
-    opacity: 0.9;
+    .menu-section.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .menu-section.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(8px, -9px);
+    }
+
+    .menu-section.on nav ul {
+        text-align: center;
+        display: block;
+    }
+
+    .menu-section.on nav ul a{
+        transition-duration: 0.5s;
+        font-size: 3rem;
+        line-height: 4rem;
+        display: block;
+        
+    }
 }

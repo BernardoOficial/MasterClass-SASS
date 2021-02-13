@@ -11,11 +11,11 @@
     background-color: rgba(0, 0, 0, 0.6);
     opacity: 0;
     visibility: hidden;
-}
 
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 .modal {
@@ -35,42 +35,42 @@
     visibility: hidden;
     transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
     transform: scale(1.2);
-}
 
-.modal .close-modal {
-    position: absolute;
-    cursor: pointer;
-    top: 5px;
-    right: 15px;
-    opacity: 0;
-    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-    transition-delay: 0.3s;
-}
+    .close-modal {
+        position: absolute;
+        cursor: pointer;
+        top: 5px;
+        right: 15px;
+        opacity: 0;
+        transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+        transition-delay: 0.3s;
 
-.modal .close-modal svg {
-    width: 18px;
-    height: 18px;
-}
+         svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
 
-.modal .modal-content {
-    opacity: 0;
-    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-    transition-delay: 0.3s;
-}
+    .modal-content {
+        opacity: 0;
+        transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+        transition-delay: 0.3s;
+    }
 
-.modal.active {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
-}
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+    }
 
-.modal.active .modal-content {
-    opacity: 1;
-}
+    &.active .modal-content {
+        opacity: 1;
+    }
 
-.modal.active .close-modal {
-    transform: translateY(10px);
-    opacity: 1;
+    &.active .close-modal {
+        transform: translateY(10px);
+        opacity: 1;
+    }
 }
 
 .video-background {
