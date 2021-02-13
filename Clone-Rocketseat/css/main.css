@@ -1,4 +1,16 @@
 @charset "UTF-8";
+header .container, .modal-overlay, .modal, #form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -50,7 +62,7 @@ h3 {
   display: inline-block;
   font-size: 1.6rem;
   font-weight: 600;
-  color: white;
+  color: #ffffff;
   background-color: #7159c1;
   margin: 15px 0px 0px;
   padding: 12px 30px;
@@ -70,21 +82,14 @@ header {
 }
 
 header .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 90%;
   max-width: 980px;
   margin: auto;
 }
 
 header img {
+  -webkit-filter: invert(0%);
+          filter: invert(0%);
   width: 150px;
   margin-left: 20px;
   padding: 15px 0;
@@ -96,19 +101,19 @@ header img {
   }
 }
 
-header nav ul {
+header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header nav ul li {
+header ul li {
   list-style: none;
 }
 
-header nav ul li a {
+header ul a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   text-transform: uppercase;
   font-size: 1.4rem;
   padding: 2.4rem;
@@ -116,7 +121,7 @@ header nav ul li a {
   transition: all 250ms linear 0s;
 }
 
-header nav ul li a:hover {
+header ul a:hover {
   background: rgba(255, 255, 255, 0.15);
 }
 
@@ -145,15 +150,6 @@ header nav ul li a:hover {
     height: 100vh;
     background-color: #7159c1;
     z-index: 10;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .menu-section.on nav {
     display: block;
@@ -194,6 +190,7 @@ section.hero {
 section.hero .container {
   width: 90%;
   max-width: 980px;
+  margin: auto;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -240,7 +237,7 @@ section.hero p {
   font-size: 1.6rem;
   line-height: 2.6rem;
   font-weight: 400;
-  color: #ecf0f1;
+  color: #ffffff;
 }
 
 .card {
@@ -308,15 +305,6 @@ section.hero p {
 }
 
 .modal-overlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -334,15 +322,6 @@ section.hero p {
 }
 
 .modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   position: relative;
   background-color: #fff;
   width: 95%;
@@ -431,15 +410,6 @@ section.hero p {
   background: #7159c1;
   padding: 80px 0;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 #form form {

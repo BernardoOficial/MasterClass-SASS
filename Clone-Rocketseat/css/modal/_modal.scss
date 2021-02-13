@@ -1,7 +1,6 @@
 .modal-overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex-center;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -19,9 +18,8 @@
 }
 
 .modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex-center;
+
     position: relative;
     background-color: #fff;
     width: 95%;
@@ -45,7 +43,7 @@
         transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
         transition-delay: 0.3s;
 
-         svg {
+        svg {
             width: 18px;
             height: 18px;
         }

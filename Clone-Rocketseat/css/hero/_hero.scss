@@ -2,8 +2,7 @@ section.hero {
     margin: 80px 0;
 
     .container {
-        width: 90%;
-        max-width: 980px;
+        @include container-base();
         margin: auto;
         display: flex;
 

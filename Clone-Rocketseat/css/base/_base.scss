@@ -1,3 +1,31 @@
+// Variáveis
+$primary-color: #7159c1;
+// $primary-color: #bab3d1;
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin container-base($isAuto: true) {
+    width: 90%;
+    max-width: 980px;
+
+    @if $isAuto {
+        margin: auto;
+    }
+}
+
+@function color-text($color) {
+    @if lightness($color) > 70 {
+        @return #333333;
+    }
+    @else {
+        @return #ffffff;
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -46,8 +74,8 @@ h3 {
     display: inline-block;
     font-size: 1.6rem;
     font-weight: 600;
-    color: rgb(255, 255, 255);
-    background-color: rgb(113, 89, 193);
+    color: color-text($primary-color);
+    background-color: $primary-color;
     margin: 15px 0px 0px;
     padding: 12px 30px;
     text-decoration: none;
